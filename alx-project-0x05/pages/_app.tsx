@@ -5,6 +5,7 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { CountProvider } from "@/context/CountContext";
 import Header from "@/components/Header";
+ import { useCount } from "@/context/CountContext";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -15,6 +16,9 @@ export default function App({ Component, pageProps }: AppProps) {
     </CountProvider>
   )
 }
+
+
+
 
 
 
