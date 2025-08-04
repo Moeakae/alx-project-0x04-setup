@@ -1,4 +1,8 @@
 import { createContext, useContext,  useState, ReactNode } from "react"
+import { useCount } from "@/context/CountContext";
+
+const useCount: () => CountContextProps
+
 
 interface CountContextProps {
   count: number
@@ -33,3 +37,16 @@ export const useCount = () => {
 
   return context
 }
+
+export default function CounterComponent() {
+  const { count, increment, decrement } = useCount();
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={increment}>➕</button>
+      <button onClick={decrement}>➖</button>
+    </div>
+  );
+}
+
