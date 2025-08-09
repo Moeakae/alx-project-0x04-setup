@@ -3,6 +3,7 @@ import Button from "../common/Button";
 import { usePathname } from "next/navigation";
 import { useCount } from "@/context/CountContext"";
 import { UseSelector } from "react-redux";
+import { useSelector} from "react-redux";
 
 const Header: React.FC = () => {
 
